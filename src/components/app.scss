@@ -1,159 +1,204 @@
 @import '~antd/dist/antd.css';
 
-body {
-    background: #ececec;
-    background-size: 300% 300%;
-    -webkit-animation: Background 25s ease infinite;
-    -moz-animation: Background 25s ease infinite;
-    animation: Background 25s ease infinite;
-  }
+	body {
+		background: #ececec;
+		background-size: 300% 300%;
+		-webkit-animation: Background 25s ease infinite;
+		-moz-animation: Background 25s ease infinite;
+		animation: Background 25s ease infinite;
+		width: 100%;
+	}
 
-  .full-screen {
-    position: relative;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  //you need to setup file-loader in webpack before you can use images
-    // background: url("../../assests/image/background.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: column;
-    //_ works with row or column_
-  
-    flex-direction: column;
-    -webkit-align-items: center;
-    align-items: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    text-align: center;
-  }
+	.full-screen {
+		position: relative;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	//you need to setup file-loader in webpack before you can use images
+		// background: url("../../assests/image/background.png");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 100%;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-direction: column;
+		//_ works with row or column_
 
-  .containerScreen {
-	  padding: 20px;
-    width: 100%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-  }
+		flex-direction: column;
+		-webkit-align-items: center;
+		align-items: center;
+		-webkit-justify-content: center;
+		justify-content: center;
+		text-align: center;
+		padding: 20px;
+	}
 
-  .dashboardContainer {
-    background: #ececec;
-    margin: 20px;
-    position: relative;
-    box-shadow: 5px 10px 18px #888888;
-    width: 100%;
-    height: 1000px;
-    border-radius: 10px;
-    padding: 20px;
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+	@media (max-width: 600px) {
+		.full-screen {
+			padding: 0px;
+		}
+	}
 
-  .statisticContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-  }
+	.containerScreen {
+		width: 70%;
+		height: 100%;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		background-color: whitesmoke;
+		box-shadow: 2px 4px 15px 0px rgba(0, 0, 0, 0.6);
+	}
 
-  .buildingContainer {
-    width: 100%;
-    height: 100%;
-    padding: 45px
-  }
+	@media (max-width: 600px) {
+		.containerScreen {
+			width: 100vw;
+		}
+	}
 
-  .welcomePage {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-  }
+	.nameStyle {
+		color: rgba(0,0,0,.6);
+		font-weight: 600;
+		font-size: 16px;
+	}
 
-  h1 {
-    color: #fff;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 800;
-    font-size: 4em;
-    letter-spacing: -2px;
-    text-align: center;
-    text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.6);
-  
-    &:after {
-      display: block;
-      color: #fff;
-      letter-spacing: 1px;
-      font-family: "Poiret One", sans-serif;
-      content: "React project powered by webpack and babel with support for sass";
-      font-size: 0.4em;
-      text-align: center;
-    }
-  }
-  
-  .button-line {
-    font-family: "Open Sans", sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    background: transparent;
-    border: 1px solid #fff;
-    color: #fff;
-    text-align: center;
-    font-size: 1.4em;
-    opacity: 0.8;
-    padding: 20px 40px;
-    text-decoration: none;
-    transition: all 0.5s ease;
-    margin: 0 auto;
-    display: block;
-  
-    &:hover {
-      opacity: 1;
-      background-color: #fff;
-      color: grey;
-    }
-  }
-  
-  @-webkit-keyframes Background {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-  
-  @-moz-keyframes Background {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-  
-  @keyframes Background {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
+	.priceStyle {
+		color: #FFA625;
+		font-weight: 600;
+	}
+
+	.furnitureStyle {
+		color: #3B85D0;
+		font-size: 12px;
+		margin-top: 10px;
+	}
+
+	.descriptionStyle {
+		margin-top: 10px;
+		color: rgba(0,0,0,.6);
+		font-size: 12px;
+	}
+
+	.deliveryTimeStyle {
+		color: #3B85D0;
+		font-size: 14px;
+		margin-top: 10px;
+		font-weight: 600;
+	}
+
+	.headerContainer {
+		position: relative;
+		top: 0;
+		padding: 20px 40px;
+		background-color: #3B85D0;
+		min-height: 100px;
+	}
+
+	.containerInputSearch {
+		width: 95%;
+		height: 30px;
+	}
+
+	.inputSearch {
+		border: none;
+		width: 100%;
+		border-bottom: 1px solid rgba(255,255,255, .6);
+		background: transparent;
+		color: whitesmoke;
+		outline: none;
+	}
+
+	::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+		color: white;
+		opacity: .6; /* Firefox */
+	}
+	  
+	:-ms-input-placeholder { /* Internet Explorer 10-11 */
+		color: white;
+	}
+
+	::-ms-input-placeholder { /* Microsoft Edge */
+		color: white;
+	}
+
+	h1 {
+		color: #fff;
+		font-family: "Open Sans", sans-serif;
+		font-weight: 800;
+		font-size: 4em;
+		letter-spacing: -2px;
+		text-align: center;
+		text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.6);
+	
+		&:after {
+		display: block;
+		color: #fff;
+		letter-spacing: 1px;
+		font-family: "Poiret One", sans-serif;
+		content: "React project powered by webpack and babel with support for sass";
+		font-size: 0.4em;
+		text-align: center;
+		}
+	}
+
+	.button-line {
+		font-family: "Open Sans", sans-serif;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		background: transparent;
+		border: 1px solid #fff;
+		color: #fff;
+		text-align: center;
+		font-size: 1.4em;
+		opacity: 0.8;
+		padding: 20px 40px;
+		text-decoration: none;
+		transition: all 0.5s ease;
+		margin: 0 auto;
+		display: block;
+
+		&:hover {
+		opacity: 1;
+		background-color: #fff;
+		color: grey;
+		}
+	}
+	
+	@-webkit-keyframes Background {
+		0% {
+		background-position: 0% 50%;
+		}
+		50% {
+		background-position: 100% 50%;
+		}
+		100% {
+		background-position: 0% 50%;
+		}
+	}
+	
+	@-moz-keyframes Background {
+		0% {
+		background-position: 0% 50%;
+		}
+		50% {
+		background-position: 100% 50%;
+		}
+		100% {
+		background-position: 0% 50%;
+		}
+	}
+	
+	@keyframes Background {
+		0% {
+		background-position: 0% 50%;
+		}
+		50% {
+		background-position: 100% 50%;
+		}
+		100% {
+		background-position: 0% 50%;
+		}
+}
