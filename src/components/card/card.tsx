@@ -1,5 +1,6 @@
 import React, { memo } from 'react';
 import { Card, Row, Col } from 'antd';
+import { moneyFormat } from '../../function/function';
 
 export interface ICardProps {
 	name: string;
@@ -24,7 +25,7 @@ function _CardComponent(props:ICardProps) {
 
 					<Col md={12} style={{textAlign: 'right'}}>
 						<div className="priceStyle">
-							{`IDR ${price}`}
+							{moneyFormat(price,"en")}
 						</div>
 					</Col>
 				</Row>
