@@ -102,6 +102,12 @@
 		height: 30px;
 	}
 
+	.anticon-check {
+		background: green;
+		color: white;
+		border: 1px solid black;
+	}
+
 	.inputSearch {
 		border: none;
 		width: 100%;
@@ -109,6 +115,23 @@
 		background: transparent;
 		color: whitesmoke;
 		outline: none;
+	}
+
+	.containerDeliveryTime {
+		width: 95%;
+		height: 30px;
+		margin-left: 20px;
+	}
+
+	.noDataStyle {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 50px;
+		font-size: 20px;
+		font-weight: 600;
+		font-style: italic;
+		color: #3B85D0;
 	}
 
 	::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
