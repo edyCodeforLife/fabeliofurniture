@@ -3,6 +3,9 @@ Fabelio project web apps
 
 Hello, My name Edy Susanto i make Fabelio furniture web apps for technical test using React + Typescript.
 
+# Demo
+[Demo click here](https://fabelio-furniture.netlify.app/)
+
 # API
 [Rest Service articles endpoint](https://www.mocky.io/v2/5c9105cb330000112b649af8).
 
