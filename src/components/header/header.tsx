@@ -37,8 +37,8 @@ function _Header(props: IHeaderProps) {
 
     return(
 		<div className="headerContainer">
-			<Row style={{width: '100%'}} >
-				<Col md={12} style={{textAlign: 'left'}}>
+			<Row style={{width: '100%', marginBottom: 10 }} >
+				<Col md={12} xs={24} style={{textAlign: 'left'}}>
 					<div className="containerInputSearch">
 						<input
 							onChange={(e) => onSearch(e)}
@@ -51,7 +51,7 @@ function _Header(props: IHeaderProps) {
 			</Row>
 
 			<Row style={{width: '100%'}} >
-				<Col md={12} style={{textAlign: 'left'}}>
+				<Col md={12} xs={12} style={{textAlign: 'left'}}>
 					<div className="containerInputSearch">
 						<Select
 							mode="multiple"
@@ -65,7 +65,7 @@ function _Header(props: IHeaderProps) {
 					</div>
 				</Col>
 
-				<Col md={12} style={{textAlign: 'right'}}>
+				<Col md={12} xs={12} style={{textAlign: 'left'}}>
 					<div className="containerDeliveryTime">
 						<Select
 							mode="multiple"

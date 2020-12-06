@@ -102,6 +102,12 @@
 		height: 30px;
 	}
 
+	@media (max-width: 600px) {
+		.containerInputSearch {
+			width: 100%;
+		}
+	}
+
 	.anticon-check {
 		background: green;
 		color: white;
